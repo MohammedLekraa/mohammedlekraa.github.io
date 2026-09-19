@@ -9,21 +9,30 @@
 
 window.addEventListener("load", () => {
 
-    const loader = document.querySelector(".loader");
-    const progress = document.querySelector(".loader-progress");
-    const percent = document.querySelector(".loader-percent");
+    const loader =
+        document.querySelector(".loader");
+
+    const progress =
+        document.querySelector(".loader-progress");
+
+    const percent =
+        document.querySelector(".loader-percent");
+
 
     let value = 0;
+
 
     const interval = setInterval(() => {
 
         value += Math.floor(Math.random() * 8) + 4;
+
 
         if (value >= 100) {
 
             value = 100;
 
             clearInterval(interval);
+
 
             setTimeout(() => {
 
@@ -33,79 +42,17 @@ window.addEventListener("load", () => {
 
         }
 
-        progress.style.width = `${value}%`;
-        percent.textContent = `${value}%`;
+
+        progress.style.width =
+            `${value}%`;
+
+        percent.textContent =
+            `${value}%`;
 
     }, 60);
 
 });
 
-
-/* =========================
-   CUSTOM CURSOR
-========================= */
-
-const cursor = document.querySelector(".cursor");
-const cursorRing = document.querySelector(".cursor-ring");
-
-let mouseX = 0;
-let mouseY = 0;
-
-let ringX = 0;
-let ringY = 0;
-
-
-document.addEventListener("mousemove", (event) => {
-
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-
-    cursor.style.left = `${mouseX}px`;
-    cursor.style.top = `${mouseY}px`;
-
-});
-
-
-function animateCursor() {
-
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-
-    cursorRing.style.left = `${ringX}px`;
-    cursorRing.style.top = `${ringY}px`;
-
-    requestAnimationFrame(animateCursor);
-
-}
-
-animateCursor();
-
-
-/* =========================
-   CURSOR HOVER
-========================= */
-
-const interactiveElements =
-    document.querySelectorAll(
-        "a, .project-card, .skill-card"
-    );
-
-
-interactiveElements.forEach((element) => {
-
-    element.addEventListener("mouseenter", () => {
-
-        cursorRing.classList.add("active");
-
-    });
-
-    element.addEventListener("mouseleave", () => {
-
-        cursorRing.classList.remove("active");
-
-    });
-
-});
 
 
 /* =========================
@@ -116,31 +63,34 @@ const revealElements =
     document.querySelectorAll(".reveal");
 
 
-const observer = new IntersectionObserver(
+const observer =
+    new IntersectionObserver(
 
-    (entries) => {
+        (entries) => {
 
-        entries.forEach((entry) => {
+            entries.forEach((entry) => {
 
-            if (entry.isIntersecting) {
+                if (entry.isIntersecting) {
 
-                entry.target.classList.add("visible");
+                    entry.target.classList.add(
+                        "visible"
+                    );
 
-                observer.unobserve(entry.target);
+                    observer.unobserve(
+                        entry.target
+                    );
 
-            }
+                }
 
-        });
+            });
 
-    },
+        },
 
-    {
+        {
+            threshold: 0.12
+        }
 
-        threshold: 0.12
-
-    }
-
-);
+    );
 
 
 revealElements.forEach((element) => {
@@ -148,6 +98,7 @@ revealElements.forEach((element) => {
     observer.observe(element);
 
 });
+
 
 
 /* =========================
@@ -160,35 +111,49 @@ const magneticButtons =
 
 magneticButtons.forEach((button) => {
 
-    button.addEventListener("mousemove", (event) => {
 
-        const rect =
-            button.getBoundingClientRect();
+    button.addEventListener(
+        "mousemove",
+        (event) => {
 
-        const x =
-            event.clientX -
-            rect.left -
-            rect.width / 2;
-
-        const y =
-            event.clientY -
-            rect.top -
-            rect.height / 2;
-
-        button.style.transform =
-            `translate(${x * 0.12}px, ${y * 0.12}px)`;
-
-    });
+            const rect =
+                button.getBoundingClientRect();
 
 
-    button.addEventListener("mouseleave", () => {
+            const x =
+                event.clientX -
+                rect.left -
+                rect.width / 2;
 
-        button.style.transform =
-            "translate(0, 0)";
 
-    });
+            const y =
+                event.clientY -
+                rect.top -
+                rect.height / 2;
+
+
+            button.style.transform =
+                `translate(
+                    ${x * 0.12}px,
+                    ${y * 0.12}px
+                )`;
+
+        }
+    );
+
+
+    button.addEventListener(
+        "mouseleave",
+        () => {
+
+            button.style.transform =
+                "translate(0, 0)";
+
+        }
+    );
 
 });
+
 
 
 /* =========================
@@ -199,30 +164,52 @@ const hardware =
     document.querySelector(".hardware-frame");
 
 
-document.addEventListener("mousemove", (event) => {
+document.addEventListener(
+    "mousemove",
+    (event) => {
 
-    if (!hardware) return;
-
-    const x =
-        (event.clientX / window.innerWidth - 0.5) * 2;
-
-    const y =
-        (event.clientY / window.innerHeight - 0.5) * 2;
-
-    hardware.style.transform =
-        `perspective(900px)
-         rotateY(${x * 2}deg)
-         rotateX(${y * -2}deg)`;
-
-});
+        if (!hardware) return;
 
 
-hardware.addEventListener("mouseleave", () => {
+        const x =
+            (
+                event.clientX /
+                window.innerWidth -
+                0.5
+            ) * 2;
 
-    hardware.style.transform =
-        "perspective(900px) rotateY(0deg) rotateX(0deg)";
 
-});
+        const y =
+            (
+                event.clientY /
+                window.innerHeight -
+                0.5
+            ) * 2;
+
+
+        hardware.style.transform =
+            `perspective(900px)
+             rotateY(${x * 2}deg)
+             rotateX(${y * -2}deg)`;
+
+    }
+);
+
+
+if (hardware) {
+
+    hardware.addEventListener(
+        "mouseleave",
+        () => {
+
+            hardware.style.transform =
+                "perspective(900px) rotateY(0deg) rotateX(0deg)";
+
+        }
+    );
+
+}
+
 
 
 /* =========================
@@ -232,41 +219,57 @@ hardware.addEventListener("mouseleave", () => {
 const sections =
     document.querySelectorAll("section[id]");
 
+
 const navLinks =
-    document.querySelectorAll(".navbar nav a");
+    document.querySelectorAll(
+        ".navbar nav a"
+    );
 
 
-window.addEventListener("scroll", () => {
+window.addEventListener(
+    "scroll",
+    () => {
 
-    let current = "";
-
-    sections.forEach((section) => {
-
-        const sectionTop =
-            section.offsetTop - 150;
-
-        if (window.scrollY >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
+        let current = "";
 
 
-    navLinks.forEach((link) => {
+        sections.forEach((section) => {
 
-        link.style.color = "";
+            const sectionTop =
+                section.offsetTop - 150;
 
-        if (
-            link.getAttribute("href") ===
-            `#${current}`
-        ) {
 
-            link.style.color = "#1557ff";
+            if (
+                window.scrollY >=
+                sectionTop
+            ) {
 
-        }
+                current =
+                    section.getAttribute(
+                        "id"
+                    );
 
-    });
+            }
 
-});
+        });
+
+
+        navLinks.forEach((link) => {
+
+            link.style.color = "";
+
+
+            if (
+                link.getAttribute("href") ===
+                `#${current}`
+            ) {
+
+                link.style.color =
+                    "#1557ff";
+
+            }
+
+        });
+
+    }
+);
