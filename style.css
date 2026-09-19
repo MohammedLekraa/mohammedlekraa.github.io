@@ -541,15 +541,24 @@ button, a {
     transition: all 0.4s cubic-bezier(.2,.8,.2,1);
 }
 
+.project-blue { 
+    --project-color: var(--blue); 
+    --project-glow: rgba(0, 243, 255, 0.2);
+}
+.project-orange { 
+    --project-color: var(--orange); 
+    --project-glow: rgba(255, 107, 53, 0.2);
+}
+.project-purple { 
+    --project-color: var(--purple); 
+    --project-glow: rgba(168, 85, 247, 0.2);
+}
+
 .project-card:hover {
     transform: translateY(-8px);
     border-color: var(--project-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px color-mix(in srgb, var(--project-color) 30%, transparent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--project-glow);
 }
-
-.project-blue { --project-color: var(--blue); }
-.project-orange { --project-color: var(--orange); }
-.project-purple { --project-color: var(--purple); }
 
 .project-image {
     position: relative;
@@ -600,8 +609,8 @@ button, a {
 .image-overlay {
     position: absolute;
     inset: 0;
-    background: color-mix(in srgb, var(--project-color) 85%, black);
-    color: #fff;
+    background: rgba(10, 13, 18, 0.85);
+    color: var(--project-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,7 +623,7 @@ button, a {
 }
 
 .project-card:hover .image-overlay {
-    opacity: 0.95;
+    opacity: 1;
 }
 
 .project-details {
@@ -673,7 +682,7 @@ button, a {
     color: #000;
     font-weight: 700;
     border-color: var(--project-color);
-    box-shadow: 0 0 10px var(--project-color);
+    box-shadow: 0 0 10px var(--project-glow);
 }
 
 .project-footer {
