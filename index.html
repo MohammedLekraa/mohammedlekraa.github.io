@@ -1,382 +1,923 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mohammed Lekraa — Embedded Systems & Hardware Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Mohammed Lekraa — Estudiante de Ingeniería de Telecomunicaciones. Sistemas Embebidos, Hardware y RF.">
+    <title>Mohammed Lekraa — Embedded Systems & Hardware</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description"
+        content="Mohammed Lekraa — Embedded Systems, Electronics, Hardware and Robotics.">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-  
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-    <header class="navbar">
-        <a href="#" class="logo">
-            ML <span>//</span> 01
-        </a>
+    <!-- =========================
+         LOADER
+    ========================== -->
 
-        <nav>
-            <a href="#about">
-                <span>01</span> About
-            </a>
-            <a href="#projects">
-                <span>02</span> Projects
-            </a>
-            <a href="#contact">
-                <span>03</span> Contacto
-            </a>
-        </nav>
-    </header>
+    <div class="loader">
 
+        <div class="loader-inner">
 
-    <main>
+            <div class="loader-top">
+                <span>ML // SYSTEM INITIALIZATION</span>
+                <span>001</span>
+            </div>
 
-        <!-- =========================
-             HERO (INICIO)
-        ========================== -->
-        <section class="hero">
-            <div class="technical-grid"></div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
 
-            <div class="hero-content reveal">
-                <div class="eyebrow">
-                    <span class="eyebrow-line"></span>
-                    HOLA SOY
-                </div>
+            <div class="loader-bottom">
+                <span>BOOTING PORTFOLIO</span>
+                <span class="loader-percent">0%</span>
+            </div>
 
-                <h1>
-                    MOHAMMED
-                    <span>LEKRAA</span>
-                </h1>
+        </div>
 
-                <div class="hero-subtitle">
-                    <span class="mono">01 //</span>
-                    <p>
-                        Estudiante de Ingeniería de Telecomunicaciones interesado en <strong>Sistemas Embebidos, Hardware y RF</strong>.
-                    </p>
-                </div>
-
-                <div class="hero-buttons">
-                    <a href="#about" class="primary-button">
-                        SOBRE MÍ
-                        <span>↗</span>
-                    </a>
-
-                    <a href="#contact" class="text-button">
-                        CONTACTO
-                        <span>↓</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- HERO PHOTO / HARDWARE FRAME -->
-            <div class="hero-hardware reveal">
-                <div class="hardware-frame">
-                    <div class="frame-top">
-                        <span>SYS_01</span>
-                        <span>PORTRAIT</span>
-                    </div>
-
-                    <div class="hardware-image">
-                        <!-- Cuando tengas tu foto, sustituye el placeholder por esta línea:
-                        <img src="tu_foto.jpg" alt="Mohammed Lekraa"> 
-                        -->
-                        <div class="image-placeholder">
-                            <span class="crosshair crosshair-1"></span>
-                            <span class="crosshair crosshair-2"></span>
-                            <span class="placeholder-text">
-                                TU FOTO<br>AQUÍ
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="frame-bottom">
-                        <span>MOHAMMED LEKRAA</span>
-                        <span class="active">
-                            ● ACTIVE SYSTEM
-                        </span>
-                    </div>
-                </div>
-
-                <div class="hardware-coordinates">
-                    <span>41° 32' 52" N</span>
-                    <span>ENGINEERING LAB</span>
-                </div>
-            </div>
-
-            <div class="hero-footer">
-                <span>SCROLL TO EXPLORE</span>
-                <div class="scroll-line">
-                    <span></span>
-                </div>
-                <span>2026</span>
-            </div>
-        </section>
+    </div>
 
 
-        <!-- =========================
-             ABOUT (SOBRE MÍ)
-        ========================== -->
-        <section id="about" class="about section">
-            <div class="section-header reveal">
-                <div>
-                    <span class="section-number">01 / ABOUT</span>
-                    <h2>
-                        QUIÉN
-                        <span>SOY.</span>
-                    </h2>
-                </div>
-            </div>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-            <div class="about-grid">
-                <div class="about-large reveal">
-                    <p>
-                        Soy un estudiante de 
-                        <strong>Ingeniería de Telecomunicaciones</strong>
-                        con una fuerte pasión por los sistemas embebidos, el diseño de hardware y las tecnologías de radiofrecuencia (RF).
-                    </p>
-                </div>
+    <header class="navbar">
 
-                <div class="about-text reveal">
-                    <p>
-                        Me enfoco en comprender cómo funcionan los sistemas completos desde la capa física y los circuitos de RF hasta los microcontroladores, PCBs, firmware y la integración de sensores.
-                    </p>
-                    <p>
-                        Mi enfoque de trabajo es práctico y riguroso:
-                        <strong>diseñar, probar, analizar y optimizar.</strong>
-                    </p>
-                </div>
-            </div>
+        <a href="#" class="logo">
+            ML <span>//</span> 01
+        </a>
 
-            <div class="engineering-principle reveal">
-                <span>ENGINEERING PRINCIPLE</span>
-                <strong>IF IT DOESN'T WORK — FIND OUT WHY.</strong>
-            </div>
-        </section>
+        <nav>
+
+            <a href="#projects">
+                <span>01</span>
+                Projects
+            </a>
+
+            <a href="#skills">
+                <span>02</span>
+                Skills
+            </a>
+
+            <a href="#about">
+                <span>03</span>
+                About
+            </a>
+
+            <a href="#contact">
+                <span>04</span>
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
 
 
-        <!-- =========================
-             PROJECTS
-        ========================== -->
-        <section id="projects" class="projects section">
-            <div class="section-header reveal">
-                <div>
-                    <span class="section-number">02 / SELECTED WORK</span>
-                    <h2>
-                        PROYECTOS
-                        <span>DESTACADOS</span>
-                    </h2>
-                </div>
-
-                <p>
-                    Sistemas desarrollados desde el concepto<br>
-                    hasta el prototipo funcional.
-                </p>
-            </div>
-
-            <!-- PROJECT GRID -->
-            <div class="projects-grid">
-
-                <!-- PROJECT 001 -->
-                <article class="project-card project-blue reveal">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="project-index">PROJECT_001</span>
-                            <span class="project-placeholder-title">ROBOTIC ARM</span>
-                            <span class="project-crosshair"></span>
-                        </div>
-                        <div class="image-overlay">
-                            VIEW PROJECT ↗
-                        </div>
-                    </div>
-
-                    <div class="project-details">
-                        <div class="project-meta">
-                            <span>001</span>
-                            <span>HARDWARE + FIRMWARE</span>
-                        </div>
-
-                        <h3>
-                            Sensorized Glove<br>Controlled Robotic Arm
-                        </h3>
-
-                        <p>
-                            Sistema robótico capaz de reproducir los movimientos de la mano humana mediante un guante sensorizado, controladores embebidos, sensores inerciales y servomotores.
-                        </p>
-
-                        <div class="system-stack">
-                            <span>ESP32</span>
-                            <span>MPU6050</span>
-                            <span>FLEX SENSORS</span>
-                            <span>PCB</span>
-                            <span>BLUETOOTH</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <span>URV · TFG / PROYECTO</span>
-                            <a href="#" class="project-link">
-                                EXPLORAR PROYECTO <span>↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PROJECT 002 -->
-                <article class="project-card project-orange reveal">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="project-index">PROJECT_002</span>
-                            <span class="project-placeholder-title">PCB / POWER</span>
-                            <span class="project-crosshair"></span>
-                        </div>
-                        <div class="image-overlay">
-                            VIEW PROJECT ↗
-                        </div>
-                    </div>
-
-                    <div class="project-details">
-                        <div class="project-meta">
-                            <span>002</span>
-                            <span>ELECTRONICS</span>
-                        </div>
-
-                        <h3>
-                            Power &<br>Control System
-                        </h3>
-
-                        <p>
-                            Diseño electrónico enfocado en la separación de las etapas de potencia y control, reduciendo interferencias y optimizando la alimentación en sistemas embebidos.
-                        </p>
-
-                        <div class="system-stack">
-                            <span>PCB</span>
-                            <span>POWER</span>
-                            <span>ESP32</span>
-                            <span>SERVOS</span>
-                            <span>ISOLATION</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <span>ELECTRONICS · DEVELOPMENT</span>
-                            <a href="#" class="project-link">
-                                EXPLORAR PROYECTO <span>↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PROJECT 003 -->
-                <article class="project-card project-purple reveal">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="project-index">PROJECT_003</span>
-                            <span class="project-placeholder-title">RF / EMBEDDED</span>
-                            <span class="project-crosshair"></span>
-                        </div>
-                        <div class="image-overlay">
-                            VIEW PROJECT ↗
-                        </div>
-                    </div>
-
-                    <div class="project-details">
-                        <div class="project-meta">
-                            <span>003</span>
-                            <span>RF & EMBEDDED</span>
-                        </div>
-
-                        <h3>
-                            RF Communication &<br>Embedded Control
-                        </h3>
-
-                        <p>
-                            Desarrollo de firmware y hardware para la adquisición de datos de sensores y transmisión inalámbrica de señales en tiempo real.
-                        </p>
-
-                        <div class="system-stack">
-                            <span>C / C++</span>
-                            <span>RF</span>
-                            <span>MCU</span>
-                            <span>SENSORS</span>
-                            <span>FIRMWARE</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <span>EMBEDDED · IN DEVELOPMENT</span>
-                            <a href="#" class="project-link">
-                                EXPLORAR PROYECTO <span>↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
+    <main>
 
 
-        <!-- =========================
-             CONTACTO
-        ========================== -->
-        <section id="contact" class="contact section">
-            <div class="contact-grid">
-                <div class="contact-title reveal">
-                    <span class="section-number">03 / CONTACTO</span>
-                    <h2>
-                        LET'S BUILD
-                        <span>SOMETHING.</span>
-                    </h2>
-                </div>
+        <!-- =========================
+             HERO
+        ========================== -->
 
-                <div class="contact-info reveal">
-                    <p>
-                        ¿Interesado en sistemas embebidos, diseño de hardware o proyectos de RF? ¡Hablemos!
-                    </p>
+        <section class="hero">
 
-                    <a href="mailto:tu_email@ejemplo.com" class="contact-email">
-                        tu_email@ejemplo.com
-                        <span>↗</span>
-                    </a>
-
-                    <div class="contact-links">
-                        <a href="https://github.com/MohammedLekraa" target="_blank">
-                            GITHUB ↗
-                        </a>
-                        <a href="#" target="_blank">
-                            LINKEDIN ↗
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
+            <div class="technical-grid"></div>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer>
-        <span>MOHAMMED LEKRAA</span>
-        <span>TELECOM · EMBEDDED SYSTEMS · HARDWARE · RF</span>
-        <span>© 2026</span>
-    </footer>
+            <div class="hero-content reveal">
 
-    <script src="script.js"></script>
+                <div class="eyebrow">
+
+                    <span class="eyebrow-line"></span>
+
+                    EMBEDDED SYSTEMS & ELECTRONICS
+
+                </div>
+
+
+                <h1>
+
+                    MOHAMMED
+
+                    <span>LEKRAA</span>
+
+                </h1>
+
+
+                <div class="hero-subtitle">
+
+                    <span class="mono">01 //</span>
+
+                    <p>
+                        I build systems where
+                        <strong>software meets the physical world.</strong>
+                    </p>
+
+                </div>
+
+
+                <p class="hero-description">
+
+                    Embedded systems · Electronics · Hardware · Robotics
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="primary-button magnetic">
+
+                        EXPLORE PROJECTS
+
+                        <span>↗</span>
+
+                    </a>
+
+
+                    <a href="#contact" class="text-button">
+
+                        GET IN TOUCH
+
+                        <span>↓</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO HARDWARE -->
+
+            <div class="hero-hardware reveal">
+
+                <div class="hardware-frame">
+
+                    <div class="frame-top">
+
+                        <span>SYS_01</span>
+
+                        <span>ROBOTIC ARM</span>
+
+                    </div>
+
+
+                    <div class="hardware-image">
+
+                        <div class="image-placeholder">
+
+                            <span class="crosshair crosshair-1"></span>
+
+                            <span class="crosshair crosshair-2"></span>
+
+                            <span class="placeholder-text">
+
+                                YOUR HARDWARE<br>
+                                PHOTO
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="frame-bottom">
+
+                        <span>SENSORIZED GLOVE</span>
+
+                        <span class="active">
+                            ● ACTIVE SYSTEM
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hardware-coordinates">
+
+                    <span>42° 03' 17"</span>
+
+                    <span>ENGINEERING LAB</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-footer">
+
+                <span>SCROLL TO EXPLORE</span>
+
+                <div class="scroll-line">
+                    <span></span>
+                </div>
+
+                <span>2026</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section id="projects" class="projects section">
+
+
+            <div class="section-header reveal">
+
+                <div>
+
+                    <span class="section-number">
+                        01 / SELECTED WORK
+                    </span>
+
+                    <h2>
+
+                        HARDWARE
+
+                        <span>PROJECTS</span>
+
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Systems built from concept<br>
+                    to working prototype.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- PROJECT GRID -->
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 001 -->
+
+                <article class="project-card project-blue reveal">
+
+                    <div class="project-image">
+
+                        <div class="project-placeholder">
+
+                            <span class="project-index">
+                                PROJECT_001
+                            </span>
+
+                            <span class="project-placeholder-title">
+                                ROBOTIC ARM
+                            </span>
+
+                            <span class="project-crosshair"></span>
+
+                        </div>
+
+                        <div class="image-overlay">
+                            VIEW PROJECT ↗
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <div class="project-meta">
+
+                            <span>001</span>
+
+                            <span>
+                                HARDWARE + FIRMWARE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Sensorized Glove
+
+                            <br>
+
+                            Controlled Robotic Arm
+
+                        </h3>
+
+
+                        <p>
+
+                            A robotic system capable of reproducing
+                            human hand movements using a sensorized glove,
+                            embedded controllers, inertial sensing and
+                            servo actuation.
+
+                        </p>
+
+
+                        <div class="system-stack">
+
+                            <span>ESP32</span>
+                            <span>MPU6050</span>
+                            <span>FLEX SENSORS</span>
+                            <span>PCB</span>
+                            <span>BLUETOOTH</span>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <span>
+                                URV · FINAL DEGREE PROJECT
+                            </span>
+
+                            <a href="#" class="project-link">
+
+                                EXPLORE PROJECT
+
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 002 -->
+
+                <article class="project-card project-orange reveal">
+
+                    <div class="project-image">
+
+                        <div class="project-placeholder">
+
+                            <span class="project-index">
+                                PROJECT_002
+                            </span>
+
+                            <span class="project-placeholder-title">
+                                PCB / POWER
+                            </span>
+
+                            <span class="project-crosshair"></span>
+
+                        </div>
+
+                        <div class="image-overlay">
+                            VIEW PROJECT ↗
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <div class="project-meta">
+
+                            <span>002</span>
+
+                            <span>
+                                ELECTRONICS
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Power &
+
+                            <br>
+
+                            Control System
+
+                        </h3>
+
+
+                        <p>
+
+                            Electronics design focused on separating
+                            control and power stages, reducing servo
+                            interference and improving the reliability
+                            of an embedded robotic system.
+
+                        </p>
+
+
+                        <div class="system-stack">
+
+                            <span>PCB</span>
+                            <span>POWER</span>
+                            <span>ESP32</span>
+                            <span>SERVOS</span>
+                            <span>ISOLATION</span>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <span>
+                                ELECTRONICS · DEVELOPMENT
+                            </span>
+
+                            <a href="#" class="project-link">
+
+                                EXPLORE PROJECT
+
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 003 -->
+
+                <article class="project-card project-purple reveal">
+
+                    <div class="project-image">
+
+                        <div class="project-placeholder">
+
+                            <span class="project-index">
+                                PROJECT_003
+                            </span>
+
+                            <span class="project-placeholder-title">
+                                EMBEDDED SYSTEM
+                            </span>
+
+                            <span class="project-crosshair"></span>
+
+                        </div>
+
+                        <div class="image-overlay">
+                            VIEW PROJECT ↗
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <div class="project-meta">
+
+                            <span>003</span>
+
+                            <span>
+                                EMBEDDED SYSTEMS
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Embedded
+
+                            <br>
+
+                            Control System
+
+                        </h3>
+
+
+                        <p>
+
+                            Embedded development combining
+                            microcontrollers, firmware, sensors and
+                            real-time interaction between hardware and
+                            software.
+
+                        </p>
+
+
+                        <div class="system-stack">
+
+                            <span>C / C++</span>
+                            <span>MCU</span>
+                            <span>SENSORS</span>
+                            <span>FIRMWARE</span>
+                            <span>DEBUGGING</span>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <span>
+                                EMBEDDED · IN DEVELOPMENT
+                            </span>
+
+                            <a href="#" class="project-link">
+
+                                EXPLORE PROJECT
+
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TECHNICAL STACK
+        ========================== -->
+
+        <section id="skills" class="skills section">
+
+
+            <div class="section-header reveal">
+
+                <div>
+
+                    <span class="section-number">
+                        02 / CAPABILITIES
+                    </span>
+
+                    <h2>
+
+                        TECHNICAL
+
+                        <span>FOCUS</span>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card reveal">
+
+                    <span class="skill-number">
+                        01
+                    </span>
+
+                    <h3>
+                        EMBEDDED
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>C / C++</span>
+                        <span>ESP32</span>
+                        <span>STM32</span>
+                        <span>Microcontrollers</span>
+                        <span>Firmware</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <span class="skill-number">
+                        02
+                    </span>
+
+                    <h3>
+                        HARDWARE
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>PCB Design</span>
+                        <span>Electronics</span>
+                        <span>Sensors</span>
+                        <span>Power Systems</span>
+                        <span>Debugging</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <span class="skill-number">
+                        03
+                    </span>
+
+                    <h3>
+                        SYSTEMS
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>I²C</span>
+                        <span>Bluetooth</span>
+                        <span>Sensor Integration</span>
+                        <span>Control</span>
+                        <span>System Integration</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <span class="skill-number">
+                        04
+                    </span>
+
+                    <h3>
+                        PROTOTYPING
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>3D Printing</span>
+                        <span>Robotics</span>
+                        <span>Mechanical Design</span>
+                        <span>Soldering</span>
+                        <span>Rapid Prototyping</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="signal-panel reveal">
+
+                <div class="signal-info">
+
+                    <span>SYSTEM SIGNAL</span>
+
+                    <strong>
+                        HARDWARE → FIRMWARE → SYSTEM
+                    </strong>
+
+                </div>
+
+
+                <div class="signal-wave">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about" class="about section">
+
+
+            <div class="section-header reveal">
+
+                <div>
+
+                    <span class="section-number">
+                        03 / ABOUT
+                    </span>
+
+                    <h2>
+
+                        FROM IDEA
+
+                        <span>TO SYSTEM.</span>
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-large reveal">
+
+                    <p>
+
+                        I am an engineering student focused on
+
+                        <strong>
+                            embedded systems, electronics
+                            and hardware development.
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-text reveal">
+
+                    <p>
+
+                        I enjoy understanding how complete systems
+                        work — from sensors and microcontrollers
+                        to PCBs, firmware, mechanical components
+                        and physical actuation.
+
+                    </p>
+
+
+                    <p>
+
+                        My approach is simple:
+
+                        <strong>
+                            build, test, understand, improve.
+                        </strong>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="engineering-principle reveal">
+
+                <span>
+                    ENGINEERING PRINCIPLE
+                </span>
+
+                <strong>
+                    IF IT DOESN'T WORK — FIND OUT WHY.
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact" class="contact section">
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-title reveal">
+
+                    <span class="section-number">
+                        04 / CONTACT
+                    </span>
+
+                    <h2>
+
+                        LET'S BUILD
+
+                        <span>SOMETHING.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="contact-info reveal">
+
+                    <p>
+
+                        Interested in embedded systems,
+                        electronics or hardware development?
+
+                    </p>
+
+
+                    <a href="mailto:YOUR_EMAIL@gmail.com"
+                        class="contact-email">
+
+                        YOUR_EMAIL@gmail.com
+
+                        <span>↗</span>
+
+                    </a>
+
+
+                    <div class="contact-links">
+
+                        <a href="https://github.com/MohammedLekraa"
+                            target="_blank">
+
+                            GITHUB ↗
+
+                        </a>
+
+
+                        <a href="#"
+                            target="_blank">
+
+                            LINKEDIN ↗
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <span>
+            MOHAMMED LEKRAA
+        </span>
+
+        <span>
+            EMBEDDED SYSTEMS · ELECTRONICS · HARDWARE
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
