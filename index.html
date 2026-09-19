@@ -1,21 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Lekraa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammed Lekraa — Embedded Systems & Hardware</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #111111; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
 </head>
+<body class="antialiased">
 
-<body>
+  <!-- NAVIGATION -->
+  <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center border-b border-gray-200">
+    <span class="font-mono font-bold text-lg tracking-wider">ML // 01</span>
+    <div class="space-x-6 text-sm font-mono text-gray-600">
+      <a href="#projects" class="hover:text-black hover:underline">[01] PROJECTS</a>
+      <a href="#skills" class="hover:text-black hover:underline">[02] SKILLS</a>
+      <a href="#about" class="hover:text-black hover:underline">[03] ABOUT</a>
+      <a href="#contact" class="hover:text-black hover:underline">[04] CONTACT</a>
+    </div>
+  </nav>
 
-    <h1>Mohammed Lekraa</h1>
+  <!-- HERO SECTION (Swiss + Hardware First) -->
+  <section class="max-w-6xl mx-auto px-6 py-20 border-b border-gray-200">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      
+      <!-- Texto Principal -->
+      <div class="md:col-span-7 space-y-6">
+        <span class="font-mono text-xs uppercase tracking-widest text-blue-600 font-semibold">[ EMBEDDED SYSTEMS & ELECTRONICS ]</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-none text-gray-900">
+          MOHAMMED LEKRAA
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-700 font-normal leading-relaxed">
+          I build systems where software meets the physical world.
+        </p>
+        <p class="text-sm text-gray-500 max-w-lg font-mono">
+          Specialized in microcontrollers, sensor integration, custom PCB layout, and low-level firmware architecture.
+        </p>
+        
+        <div class="pt-4 flex items-center space-x-3 font-mono text-xs">
+          <span class="bg-gray-200 text-gray-800 px-2.5 py-1 rounded">ESP32</span>
+          <span class="bg-gray-200 text-gray-800 px-2.5 py-1 rounded">STM32</span>
+          <span class="bg-gray-200 text-gray-800 px-2.5 py-1 rounded">C/C++</span>
+          <span class="bg-gray-200 text-gray-800 px-2.5 py-1 rounded">PCB DESIGN</span>
+        </div>
+      </div>
 
-    <h2>Embedded Systems · Electronics · Hardware</h2>
+      <!-- Highlight / Foto Principal del Brazo -->
+      <div class="md:col-span-5 relative border border-gray-300 p-4 bg-white shadow-sm rounded-none">
+        <div class="aspect-square bg-gray-100 flex items-center justify-center border border-dashed border-gray-300 relative overflow-hidden">
+          <!-- Sustituir por la foto de tu brazo robótico -->
+          <img src="https://via.placeholder.com/500x500?text=ROBOTIC+ARM+PHOTO" alt="Robotic Arm" class="object-cover w-full h-full" />
+        </div>
+        <div class="mt-3 flex justify-between items-center font-mono text-xs text-gray-500">
+          <span>SYS_01 // SENSORIZED GLOVE</span>
+          <span class="text-emerald-600 font-semibold">• ACTIVE SYSTEM</span>
+        </div>
+      </div>
 
-    <p>
-        Engineering student interested in embedded systems,
-        electronics and hardware development.
-    </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION (Engineering Lab Style) -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-20 border-b border-gray-200">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <span class="font-mono text-xs text-gray-400 block mb-1">01 / SELECTED WORK</span>
+        <h2 class="text-3xl font-bold tracking-tight">FEATURED HARDWARE</h2>
+      </div>
+      <span class="font-mono text-xs text-gray-500 hidden sm:block">SORT: CHRONOLOGICAL</span>
+    </div>
+
+    <!-- Card Proyecto 1: Brazo Robótico -->
+    <div class="bg-white border border-gray-300 p-8 mb-12 shadow-sm hover:border-black transition-all">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <div class="md:col-span-7 space-y-4">
+          <div class="flex items-center space-x-2 font-mono text-xs text-gray-400">
+            <span>PROJECT // 001</span>
+            <span>—</span>
+            <span>HARDWARE + FIRMWARE</span>
+          </div>
+          
+          <h3 class="text-2xl font-bold">Sensorized Glove Controlled Robotic Arm</h3>
+          
+          <p class="text-gray-600 text-sm leading-relaxed">
+            System designed to replicate real-time human hand motion via a sensorized glove. Captures flex and spatial orientation data, processes it via microcontrollers, and translates signals into precise servo/motor movement.
+          </p>
+
+          <div class="pt-2">
+            <h4 class="font-mono text-xs font-semibold text-gray-500 mb-2">SYSTEM STACK:</h4>
+            <div class="flex flex-wrap gap-2 font-mono text-xs">
+              <span class="border border-gray-300 px-2 py-0.5">ESP32</span>
+              <span class="border border-gray-300 px-2 py-0.5">MPU6050 (IMU)</span>
+              <span class="border border-gray-300 px-2 py-0.5">Flex Sensors</span>
+              <span class="border border-gray-300 px-2 py-0.5">Custom PCB</span>
+              <span class="border border-gray-300 px-2 py-0.5">Bluetooth / BLE</span>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="#" class="inline-block font-mono text-xs font-bold text-black border-b border-black pb-0.5 hover:text-blue-600 hover:border-blue-600">
+              VIEW SCHEMATICS & CODE →
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 flex flex-col justify-between">
+          <div class="bg-gray-100 aspect-video border border-gray-200 flex items-center justify-center font-mono text-xs text-gray-400">
+            [ PHOTO / DEMO GIF ]
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES / SKILLS (Technical Matrix) -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-20 border-b border-gray-200">
+    <span class="font-mono text-xs text-gray-400 block mb-1">02 / CAPABILITIES</span>
+    <h2 class="text-3xl font-bold tracking-tight mb-12">TECHNICAL STACK</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 font-mono text-sm">
+      <div class="border border-gray-200 p-6 bg-white">
+        <h3 class="font-bold text-black border-b border-gray-200 pb-2 mb-4">// EMBEDDED</h3>
+        <ul class="space-y-2 text-gray-600 text-xs">
+          <li>• C / C++</li>
+          <li>• ESP32 / STM32</li>
+          <li>• FreeRTOS / Bare-Metal</li>
+          <li>• UART, SPI, I2C, BLE</li>
+        </ul>
+      </div>
+
+      <div class="border border-gray-200 p-6 bg-white">
+        <h3 class="font-bold text-black border-b border-gray-200 pb-2 mb-4">// HARDWARE</h3>
+        <ul class="space-y-2 text-gray-600 text-xs">
+          <li>• PCB Layout & Schematic</li>
+          <li>• Sensor Integration</li>
+          <li>• Signal Conditioning</li>
+          <li>• Prototyping & Soldering</li>
+        </ul>
+      </div>
+
+      <div class="border border-gray-200 p-6 bg-white">
+        <h3 class="font-bold text-black border-b border-gray-200 pb-2 mb-4">// LAB & TOOLS</h3>
+        <ul class="space-y-2 text-gray-600 text-xs">
+          <li>• Oscilloscope / Logic Analyzer</li>
+          <li>• Hardware Debugging</li>
+          <li>• KiCad / Altium</li>
+          <li>• Git / Embedded Workflows</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-500">
+    <div>MOHAMMED LEKRAA — 2026</div>
+    <div class="space-x-4 mt-4 md:mt-0">
+      <a href="https://github.com" target="_blank" class="hover:text-black">GITHUB</a>
+      <a href="https://linkedin.com" target="_blank" class="hover:text-black">LINKEDIN</a>
+      <a href="mailto:tuemail@dominio.com" class="hover:text-black">EMAIL</a>
+    </div>
+  </footer>
 
 </body>
 </html>
