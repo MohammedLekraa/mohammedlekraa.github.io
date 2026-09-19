@@ -1,18 +1,13 @@
 /* =====================================================
    MOHAMMED LEKRAA — ENGINEERING PORTFOLIO
 ===================================================== */
-document.addEventListener("DOMContentLoaded", () => {
 
-    const elements = document.querySelectorAll(".reveal");
 
 /* =========================
    VARIABLES
 ========================= */
-    const observer = new IntersectionObserver(
-        (entries) => {
 
 :root {
-            entries.forEach((entry) => {
 
     --bg: #f4f4f1;
     --surface: #ffffff;
@@ -21,20 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     --gray: #686868;
     --light-gray: #d9d9d5;
     --line: #d1d1cc;
-                if (entry.isIntersecting) {
 
     --accent: #1557ff;
     --green: #159447;
-                    entry.target.classList.add("visible");
 
     --mono: "JetBrains Mono", monospace;
     --sans: "Inter", sans-serif;
-                    observer.unobserve(entry.target);
 
 }
-                }
 
-            });
 
 /* =========================
    RESET
@@ -1754,10 +1744,6 @@ a {
         55px,
         8vw,
         120px
-        },
-        {
-            threshold: 0.12
-        }
     );
 
     line-height: 0.82;
@@ -2030,13 +2016,9 @@ footer {
     footer {
 
         flex-direction: column;
-    elements.forEach((element) => {
 
         gap: 10px;
-        observer.observe(element);
 
     }
-    });
 
 }
-});
