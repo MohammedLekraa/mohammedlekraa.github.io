@@ -936,3 +936,7 @@ footer {
         gap: 12px;
     }
 }
+/* Afegir al final de style.css per desactivar el loader temporalment */
+.loader {
+    display: none !important;
+}
