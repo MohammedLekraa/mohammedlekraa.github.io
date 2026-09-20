@@ -1,29 +1,10 @@
-window.addEventListener("load", () => {
-    // 1. Control del Loader
-    const loader = document.querySelector(".loader");
-    const loaderPercent = document.querySelector(".loader-percent");
-    const loaderProgress = document.querySelector(".loader-progress");
+/* =====================================================
+   MOHAMMED LEKRAA — INTERACTIVE ENGINE
+===================================================== */
 
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.floor(Math.random() * 15) + 10;
-
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-
-            setTimeout(() => {
-                if (loader) {
-                    loader.classList.add("loaded");
-                }
-            }, 200);
-        }
-
-        if (loaderPercent) loaderPercent.textContent = `${progress}%`;
-        if (loaderProgress) loaderProgress.style.width = `${progress}%`;
-    }, 30);
-
-    // 2. Animaciones Scroll Reveal
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. ANIMACIÓ EN FER SCROLL (REVEAL)
     const revealElements = document.querySelectorAll(".reveal");
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -37,4 +18,29 @@ window.addEventListener("load", () => {
     });
 
     revealElements.forEach((el) => revealObserver.observe(el));
+
+    // 2. EFECTE TILT EN LA IMATGE PRINCIPAL DE HEROT
+    const imageCard = document.querySelector('.image-card');
+
+    if (imageCard) {
+        imageCard.addEventListener('mousemove', (e) => {
+            const rect = imageCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -4;
+            const rotateY = ((x - centerX) / centerX) * 4;
+
+            imageCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            imageCard.style.transition = 'transform 0.1s ease-out';
+        });
+
+        imageCard.addEventListener('mouseleave', () => {
+            imageCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            imageCard.style.transition = 'transform 0.5s ease';
+        });
+    }
 });
