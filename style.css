@@ -5,29 +5,26 @@
 /* =========================
    VARIABLES
 ========================= */
-
 :root {
-    --bg: #0a0d12;
-    --surface: #121720;
-    --surface-hover: #1a2230;
+    /* Fondos (Papel / Laboratorio) */
+    --bg: #f8f9fa;             /* Fondo gris muy claro e industrial */
+    --surface: #ffffff;        /* Tarjetas en blanco puro */
+    --surface-hover: #f1f3f5;  /* Hover suave */
 
-    --black: #f0f4f8;
-    --dark: #e2e8f0;
+    /* Textos (Alto contraste) */
+    --black: #0f172a;          /* Texto principal negro/azulado */
+    --dark: #334155;           /* Texto secundario */
+    --gray: #64748b;           /* Metadatos y etiquetas */
 
-    --gray: #94a3b8;
-    --light-gray: #334155;
-    --line: #1e293b;
+    /* Acentos Profesionales */
+    --blue: #2563eb;           /* Azul técnico corporativo */
+    --orange: #d97706;         /* Naranja de advertencia / RF */
+    --purple: #7c3aed;         /* Violeta de señal */
+    --green: #16a34a;          /* Verde de confirmación */
 
-    --blue: #00f3ff;       /* Cyan técnico */
-    --orange: #ff6b35;     /* Naranja RF */
-    --purple: #a855f7;     /* Púrpura Señal */
-    --green: #00ff66;      /* Verde Embebidos */
-
-    --glow-blue: rgba(0, 243, 255, 0.25);
-    --glow-green: rgba(0, 255, 102, 0.25);
-
-    --mono: "JetBrains Mono", monospace;
-    --sans: "Inter", sans-serif;
+    /* Resplandores (Sombra suave) */
+    --glow-blue: rgba(37, 99, 235, 0.12);
+    --glow-green: rgba(22, 163, 74, 0.12);
 }
 
 /* =========================
